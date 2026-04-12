@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#2563eb">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlocStore | Android</title>
@@ -15,6 +13,7 @@
         .app-card:active { transform: scale(0.95); }
     </style>
     <script>
+        // Détection : Si ce n'est pas un Android, retour à l'accueil
         if (!/Android/.test(window.navigator.userAgent)) { window.location.href = "/"; }
     </script>
 </head>
@@ -40,12 +39,24 @@
     <section class="container mx-auto py-4">
         <div class="flex items-center mb-6 px-6"><div class="h-6 w-1 bg-blue-500 rounded-full mr-3"></div><h2 class="text-lg font-bold uppercase tracking-tight">Populaire</h2></div>
         <div class="flex overflow-x-auto gap-4 px-6 pb-6 hide-scrollbar">
+            
+            <div class="app-card bg-gray-800 rounded-3xl p-4 border border-gray-700 flex flex-col items-center text-center">
+                <div class="relative">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" class="w-16 h-16 rounded-2xl mb-3 shadow-lg object-contain bg-white p-1">
+                    <span class="absolute -top-2 -right-2 bg-red-600 text-[8px] font-bold px-2 py-1 rounded-full">#1</span>
+                </div>
+                <h3 class="text-sm font-bold truncate w-full">YouTube</h3>
+                <p class="text-red-500 text-[10px] font-bold mb-4 uppercase">Streaming</p>
+                <a href="/android/youtube" class="w-full bg-blue-600 text-white py-2 rounded-xl text-xs font-bold text-center">Voir</a>
+            </div>
+
             <div class="app-card bg-gray-800 rounded-3xl p-4 border border-gray-700 flex flex-col items-center text-center">
                 <img src="../assets/icons/blocplay.png" class="w-16 h-16 rounded-2xl mb-3 shadow-lg">
                 <h3 class="text-sm font-bold truncate w-full">BlocPlay</h3>
                 <p class="text-blue-400 text-[10px] font-bold mb-4 uppercase">Mobile APK</p>
                 <a href="/android/blocplay" class="w-full bg-blue-600 text-white py-2 rounded-xl text-xs font-bold text-center">Voir</a>
             </div>
+
             <a href="/popular" class="app-card bg-gray-800/50 rounded-3xl p-4 border-2 border-dashed border-gray-700 flex flex-col items-center justify-center text-center hover:border-blue-500 transition group">
                 <div class="w-10 h-10 bg-gray-700 rounded-full mb-3 flex items-center justify-center group-hover:bg-blue-600 transition"><span class="text-lg">➔</span></div>
                 <span class="text-xs font-bold text-gray-500 group-hover:text-white uppercase">Voir plus</span>
@@ -56,6 +67,14 @@
     <section class="container mx-auto py-4">
         <div class="flex items-center mb-6 px-6"><div class="h-6 w-1 bg-yellow-500 rounded-full mr-3"></div><h2 class="text-lg font-bold uppercase tracking-tight">Mieux notés</h2></div>
         <div class="flex overflow-x-auto gap-4 px-6 pb-6 hide-scrollbar">
+            
+            <div class="app-card bg-gray-800 rounded-3xl p-4 border border-gray-700 flex flex-col items-center text-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" class="w-16 h-16 rounded-2xl mb-3 shadow-lg object-contain bg-white p-1 border-2 border-yellow-500/50">
+                <h3 class="text-sm font-bold truncate w-full">YouTube</h3>
+                <p class="text-yellow-500 text-[10px] font-bold mb-4 uppercase">Note: 4.9/5</p>
+                <a href="/android/youtube" class="w-full bg-blue-600 text-white py-2 rounded-xl text-xs font-bold text-center">Voir</a>
+            </div>
+
             <a href="/rated/better" class="app-card bg-gray-800/50 rounded-3xl p-4 border-2 border-dashed border-gray-700 flex flex-col items-center justify-center text-center hover:border-blue-500 transition group">
                 <div class="w-10 h-10 bg-gray-700 rounded-full mb-3 flex items-center justify-center group-hover:bg-blue-600 transition"><span class="text-lg">➔</span></div>
                 <span class="text-xs font-bold text-gray-500 group-hover:text-white uppercase">Voir plus</span>
@@ -63,14 +82,5 @@
         </div>
     </section>
 
-    <script>
-        // Enregistrement du Service Worker
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js')
-            .then(() => console.log("BlocStore PWA : Prêt !"))
-            .catch((err) => console.log("Erreur PWA :", err));
-        }
-    </script>
-    
 </body>
 </html>
