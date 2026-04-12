@@ -11,6 +11,9 @@
         
         .app-card { min-width: 160px; max-width: 160px; transition: all 0.2s; }
         .app-card:hover { background-color: #2d3748; transform: translateY(-2px); }
+
+        #mobile-menu { transition: transform 0.3s ease-in-out; }
+        .menu-hidden { transform: translateX(100%); }
     </style>
 </head>
 <body class="bg-gray-900 text-white font-sans overflow-x-hidden">
@@ -18,11 +21,43 @@
     <nav class="bg-gray-800 p-4 border-b border-blue-600 sticky top-0 z-50 shadow-xl">
         <div class="container mx-auto flex justify-between items-center px-2">
             <h1 class="text-xl font-black tracking-tighter text-blue-400">BLOC<span class="text-white">STORE</span></h1>
-            <a href="#" class="bg-blue-600 px-5 py-1.5 rounded-full hover:bg-blue-700 transition font-bold text-sm">
-                Se connecter
-            </a>
+            
+            <div class="flex items-center space-x-3">
+                <a href="#" class="bg-blue-600 px-4 py-1.5 rounded-full hover:bg-blue-700 transition font-bold text-sm">
+                    Se connecter
+                </a>
+                
+                <button id="menu-btn" class="text-white focus:outline-none p-1 hover:bg-gray-700 rounded-lg transition">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
     </nav>
+
+    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-gray-800 z-[60] shadow-2xl menu-hidden p-6 border-l border-blue-600">
+        <div class="flex justify-end mb-8">
+            <button id="close-menu" class="text-gray-400 hover:text-white">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="flex flex-col space-y-6">
+            <h3 class="text-gray-500 text-xs font-bold uppercase tracking-widest">Catégories</h3>
+            <a href="/applications" class="text-xl font-bold hover:text-blue-400 transition flex items-center">
+                <span class="mr-3 text-lg text-blue-500">📱</span> Applications
+            </a>
+            <a href="/games" class="text-xl font-bold hover:text-blue-400 transition flex items-center">
+                <span class="mr-3 text-lg text-blue-500">🎮</span> Jeux
+            </a>
+            <hr class="border-gray-700">
+            <p class="text-[10px] text-gray-500 uppercase">BlocPlay Studios v1.0</p>
+        </div>
+    </div>
+
+    <div id="menu-overlay" class="fixed inset-0 bg-black/60 z-[55] hidden backdrop-blur-sm"></div>
 
     <header class="py-8 text-center bg-gray-900 px-4">
         <h2 class="text-3xl font-extrabold mb-1">BlocStore</h2>
@@ -31,94 +66,52 @@
 
     <section class="container mx-auto py-4">
         <div class="flex items-center mb-6 px-6">
-            <div class="h-6 w-1 bg-blue-500 rounded-full mr-3"></div>
+            <div class="h-6 w-1 bg-blue-500 rounded-full mr-3 shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
             <h2 class="text-lg font-bold uppercase tracking-tight">Populaire</h2>
         </div>
 
         <div class="flex overflow-x-auto gap-4 px-6 pb-6 hide-scrollbar">
-            <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center">
-                <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-600 rounded-2xl mb-3 flex items-center justify-center text-3xl">🔥</div>
-                <h3 class="text-sm font-bold truncate w-full">Mega Blast</h3>
-                <p class="text-blue-400 text-[10px] font-bold mb-4 uppercase">1.2M DL</p>
-                <button class="w-full bg-blue-600 hover:bg-blue-500 py-1.5 rounded-lg text-xs font-bold transition">Installer</button>
+            <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center shadow-lg">
+                <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-600 rounded-2xl mb-3 flex items-center justify-center text-3xl shadow-inner">🔥</div>
+                <h3 class="text-sm font-bold truncate w-full text-gray-100">Mega Blast</h3>
+                <p class="text-blue-400 text-[10px] font-bold mb-4 uppercase tracking-tighter">1.2M DL</p>
+                <button class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white py-1.5 rounded-lg text-xs font-bold transition border border-blue-600/30">Voir</button>
             </div>
-            <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center">
+            <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center shadow-lg">
                 <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-2xl mb-3 flex items-center justify-center text-3xl">🚀</div>
-                <h3 class="text-sm font-bold truncate w-full">Space Drift</h3>
-                <p class="text-blue-400 text-[10px] font-bold mb-4 uppercase">850K DL</p>
-                <button class="w-full bg-blue-600 hover:bg-blue-500 py-1.5 rounded-lg text-xs font-bold transition">Installer</button>
-            </div>
-            <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center">
-                <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-600 rounded-2xl mb-3 flex items-center justify-center text-3xl">🌲</div>
-                <h3 class="text-sm font-bold truncate w-full">Craft World</h3>
-                <p class="text-blue-400 text-[10px] font-bold mb-4 uppercase">2.5M DL</p>
-                <button class="w-full bg-blue-600 hover:bg-blue-500 py-1.5 rounded-lg text-xs font-bold transition">Installer</button>
-            </div>
-            <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center">
-                <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-600 rounded-2xl mb-3 flex items-center justify-center text-3xl">🎵</div>
-                <h3 class="text-sm font-bold truncate w-full">Beat Studio</h3>
-                <p class="text-blue-400 text-[10px] font-bold mb-4 uppercase">500K DL</p>
-                <button class="w-full bg-blue-600 hover:bg-blue-500 py-1.5 rounded-lg text-xs font-bold transition">Installer</button>
-            </div>
-            <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center">
-                <div class="w-16 h-16 bg-gradient-to-br from-red-400 to-red-700 rounded-2xl mb-3 flex items-center justify-center text-3xl">🛡️</div>
-                <h3 class="text-sm font-bold truncate w-full">Bloc Guard</h3>
-                <p class="text-blue-400 text-[10px] font-bold mb-4 uppercase">100K DL</p>
-                <button class="w-full bg-blue-600 hover:bg-blue-500 py-1.5 rounded-lg text-xs font-bold transition">Installer</button>
+                <h3 class="text-sm font-bold truncate w-full text-gray-100">Space Drift</h3>
+                <p class="text-blue-400 text-[10px] font-bold mb-4 uppercase tracking-tighter">850K DL</p>
+                <button class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white py-1.5 rounded-lg text-xs font-bold transition border border-blue-600/30">Voir</button>
             </div>
 
             <a href="/popular" class="app-card bg-gray-800/50 rounded-2xl p-4 border-2 border-dashed border-gray-700 flex flex-col items-center justify-center text-center hover:border-blue-500 transition group">
-                <div class="w-12 h-12 bg-gray-700 rounded-full mb-3 flex items-center justify-center group-hover:bg-blue-600 transition">
-                    <span class="text-xl">➔</span>
+                <div class="w-10 h-10 bg-gray-700 rounded-full mb-3 flex items-center justify-center group-hover:bg-blue-600 transition">
+                    <span class="text-lg">➔</span>
                 </div>
-                <span class="text-sm font-bold text-gray-400 group-hover:text-white">Voir plus</span>
+                <span class="text-xs font-bold text-gray-500 group-hover:text-white uppercase tracking-tighter">Voir plus</span>
             </a>
         </div>
     </section>
 
     <section class="container mx-auto py-4 mt-4">
         <div class="flex items-center mb-6 px-6">
-            <div class="h-6 w-1 bg-yellow-500 rounded-full mr-3"></div>
+            <div class="h-6 w-1 bg-yellow-500 rounded-full mr-3 shadow-[0_0_10px_rgba(234,179,8,0.5)]"></div>
             <h2 class="text-lg font-bold uppercase tracking-tight">Mieux notés</h2>
         </div>
 
         <div class="flex overflow-x-auto gap-4 px-6 pb-6 hide-scrollbar">
-            <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center">
+            <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center shadow-lg">
                 <div class="w-16 h-16 bg-gray-700 rounded-2xl mb-3 flex items-center justify-center text-3xl">🧠</div>
-                <h3 class="text-sm font-bold truncate w-full">Quiz Master</h3>
-                <p class="text-yellow-400 text-[10px] font-bold mb-4 uppercase">⭐ 4.9/5</p>
-                <button class="w-full bg-blue-600 hover:bg-blue-500 py-1.5 rounded-lg text-xs font-bold transition">Installer</button>
-            </div>
-            <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center">
-                <div class="w-16 h-16 bg-gray-700 rounded-2xl mb-3 flex items-center justify-center text-3xl">🎨</div>
-                <h3 class="text-sm font-bold truncate w-full">Draw It</h3>
-                <p class="text-yellow-400 text-[10px] font-bold mb-4 uppercase">⭐ 4.8/5</p>
-                <button class="w-full bg-blue-600 hover:bg-blue-500 py-1.5 rounded-lg text-xs font-bold transition">Installer</button>
-            </div>
-            <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center">
-                <div class="w-16 h-16 bg-gray-700 rounded-2xl mb-3 flex items-center justify-center text-3xl">🧩</div>
-                <h3 class="text-sm font-bold truncate w-full">Logic Bloc</h3>
-                <p class="text-yellow-400 text-[10px] font-bold mb-4 uppercase">⭐ 4.8/5</p>
-                <button class="w-full bg-blue-600 hover:bg-blue-500 py-1.5 rounded-lg text-xs font-bold transition">Installer</button>
-            </div>
-            <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center">
-                <div class="w-16 h-16 bg-gray-700 rounded-2xl mb-3 flex items-center justify-center text-3xl">☁️</div>
-                <h3 class="text-sm font-bold truncate w-full">Cloud Notes</h3>
-                <p class="text-yellow-400 text-[10px] font-bold mb-4 uppercase">⭐ 4.7/5</p>
-                <button class="w-full bg-blue-600 hover:bg-blue-500 py-1.5 rounded-lg text-xs font-bold transition">Installer</button>
-            </div>
-            <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center">
-                <div class="w-16 h-16 bg-gray-700 rounded-2xl mb-3 flex items-center justify-center text-3xl">🍳</div>
-                <h3 class="text-sm font-bold truncate w-full">Chef Bloc</h3>
-                <p class="text-yellow-400 text-[10px] font-bold mb-4 uppercase">⭐ 4.7/5</p>
-                <button class="w-full bg-blue-600 hover:bg-blue-500 py-1.5 rounded-lg text-xs font-bold transition">Installer</button>
+                <h3 class="text-sm font-bold truncate w-full text-gray-100">Quiz Master</h3>
+                <p class="text-yellow-400 text-[10px] font-bold mb-4 uppercase tracking-tighter">⭐ 4.9/5</p>
+                <button class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white py-1.5 rounded-lg text-xs font-bold transition border border-blue-600/30">Voir</button>
             </div>
 
             <a href="/rated/better" class="app-card bg-gray-800/50 rounded-2xl p-4 border-2 border-dashed border-gray-700 flex flex-col items-center justify-center text-center hover:border-blue-500 transition group">
-                <div class="w-12 h-12 bg-gray-700 rounded-full mb-3 flex items-center justify-center group-hover:bg-blue-600 transition">
-                    <span class="text-xl">➔</span>
+                <div class="w-10 h-10 bg-gray-700 rounded-full mb-3 flex items-center justify-center group-hover:bg-blue-600 transition">
+                    <span class="text-lg">➔</span>
                 </div>
-                <span class="text-sm font-bold text-gray-400 group-hover:text-white">Voir plus</span>
+                <span class="text-xs font-bold text-gray-500 group-hover:text-white uppercase tracking-tighter">Voir plus</span>
             </a>
         </div>
     </section>
@@ -128,5 +121,20 @@
         <p class="text-xs font-bold text-blue-500/50">Proposé par BlocPlay Studios</p>
     </footer>
 
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const overlay = document.getElementById('menu-overlay');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('menu-hidden');
+            overlay.classList.toggle('hidden');
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+    </script>
 </body>
 </html>
