@@ -3,70 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlocStore | Votre Hub d'Applications</title>
+    <title>BlocStore | Sélection Populaire</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .app-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
-        /* Empêche le chevauchement sur les très petits écrans */
-        .nav-links { gap: 1rem; }
     </style>
 </head>
 <body class="bg-gray-900 text-white font-sans">
 
     <nav class="bg-gray-800 p-4 border-b border-blue-500 sticky top-0 z-50">
-        <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-2xl font-bold tracking-tighter text-blue-400">BLOC<span class="text-white">STORE</span></h1>
             
-            <div class="flex items-center space-x-4 sm:space-x-8 text-sm sm:text-base">
-                <a href="#" class="hover:text-blue-400 transition">Jeux</a>
-                <a href="#" class="hover:text-blue-400 transition">Apps</a>
-                <a href="#" class="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition font-bold shadow-lg shadow-blue-900/20">
-                    S'abonner
+            <div class="flex items-center">
+                <a href="#" class="bg-blue-600 px-6 py-2 rounded-full hover:bg-blue-700 transition font-bold shadow-lg shadow-blue-900/20 text-sm">
+                    Se connecter
                 </a>
             </div>
         </div>
     </nav>
 
-    <header class="py-12 sm:py-20 text-center bg-gradient-to-b from-gray-800 to-gray-900 px-4">
-        <h2 class="text-4xl sm:text-6xl font-extrabold mb-4 leading-tight">Explorez le futur <br class="sm:hidden"> du Web</h2>
-        <p class="text-gray-400 text-lg sm:text-xl max-w-2xl mx-auto">Des applications performantes, sélectionnées par des passionnés.</p>
+    <header class="py-12 sm:py-16 text-center bg-gradient-to-b from-gray-800 to-gray-900 px-4">
+        <h2 class="text-4xl font-extrabold mb-2">BlocStore</h2>
+        <p class="text-gray-400 text-lg">Le meilleur du contenu sélectionné par BlocPlay.</p>
     </header>
 
-    <main class="container mx-auto px-6 py-12">
+    <main class="container mx-auto px-6 py-8">
+        <div class="flex items-center mb-8 space-x-3">
+            <div class="h-8 w-2 bg-blue-500 rounded-full"></div>
+            <h2 class="text-2xl font-bold uppercase tracking-widest">Populaire</h2>
+        </div>
+
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
             <div class="app-card bg-gray-800 rounded-2xl p-6 border border-gray-700 flex flex-col items-center text-center sm:items-start sm:text-left">
-                <div class="w-16 h-16 bg-blue-500 rounded-2xl mb-4 flex items-center justify-center text-3xl shadow-lg">🎮</div>
-                <h3 class="text-xl font-bold mb-2">Block Runner</h3>
-                <p class="text-gray-400 text-sm mb-6 flex-grow">Un jeu de course infini au design minimaliste.</p>
+                <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-600 rounded-2xl mb-4 flex items-center justify-center text-3xl shadow-lg">🔥</div>
+                <h3 class="text-xl font-bold mb-1">Mega Blast</h3>
+                <span class="text-xs font-bold text-blue-400 mb-3 uppercase tracking-tighter">1.2M Téléchargements</span>
+                <p class="text-gray-400 text-sm mb-6 flex-grow">L'arcade pur jus qui domine les classements cette semaine.</p>
                 <button class="w-full bg-gray-700 hover:bg-blue-600 py-3 rounded-xl font-bold transition">Installer</button>
             </div>
 
             <div class="app-card bg-gray-800 rounded-2xl p-6 border border-gray-700 flex flex-col items-center text-center sm:items-start sm:text-left">
-                <div class="w-16 h-16 bg-purple-500 rounded-2xl mb-4 flex items-center justify-center text-3xl shadow-lg">🛡️</div>
-                <h3 class="text-xl font-bold mb-2">Vault Guard</h3>
-                <p class="text-gray-400 text-sm mb-6 flex-grow">Gérez vos mots de passe en toute sécurité.</p>
+                <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-2xl mb-4 flex items-center justify-center text-3xl shadow-lg">🚀</div>
+                <h3 class="text-xl font-bold mb-1">Space Drift</h3>
+                <span class="text-xs font-bold text-blue-400 mb-3 uppercase tracking-tighter">850K Téléchargements</span>
+                <p class="text-gray-400 text-sm mb-6 flex-grow">Pilotez votre vaisseau dans un vide infini et stylisé.</p>
                 <button class="w-full bg-gray-700 hover:bg-blue-600 py-3 rounded-xl font-bold transition">Installer</button>
             </div>
 
             <div class="app-card bg-gray-800 rounded-2xl p-6 border border-gray-700 flex flex-col items-center text-center sm:items-start sm:text-left">
-                <div class="w-16 h-16 bg-green-500 rounded-2xl mb-4 flex items-center justify-center text-3xl shadow-lg">📊</div>
-                <h3 class="text-xl font-bold mb-2">Data Bloc</h3>
-                <p class="text-gray-400 text-sm mb-6 flex-grow">Visualisez vos statistiques en temps réel.</p>
+                <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-600 rounded-2xl mb-4 flex items-center justify-center text-3xl shadow-lg">🌲</div>
+                <h3 class="text-xl font-bold mb-1">Craft World</h3>
+                <span class="text-xs font-bold text-blue-400 mb-3 uppercase tracking-tighter">2.5M Téléchargements</span>
+                <p class="text-gray-400 text-sm mb-6 flex-grow">Le jeu de construction créatif numéro 1 du Store.</p>
                 <button class="w-full bg-gray-700 hover:bg-blue-600 py-3 rounded-xl font-bold transition">Installer</button>
             </div>
 
             <div class="app-card bg-gray-800 rounded-2xl p-6 border border-gray-700 flex flex-col items-center text-center sm:items-start sm:text-left">
-                <div class="w-16 h-16 bg-red-500 rounded-2xl mb-4 flex items-center justify-center text-3xl shadow-lg">⚡</div>
-                <h3 class="text-xl font-bold mb-2">Turbo Edit</h3>
-                <p class="text-gray-400 text-sm mb-6 flex-grow">Éditeur de code ultra-rapide pour mobile.</p>
+                <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-600 rounded-2xl mb-4 flex items-center justify-center text-3xl shadow-lg">🎵</div>
+                <h3 class="text-xl font-bold mb-1">Beat Studio</h3>
+                <span class="text-xs font-bold text-blue-400 mb-3 uppercase tracking-tighter">500K Téléchargements</span>
+                <p class="text-gray-400 text-sm mb-6 flex-grow">Créez vos propres morceaux en quelques secondes.</p>
                 <button class="w-full bg-gray-700 hover:bg-blue-600 py-3 rounded-xl font-bold transition">Installer</button>
             </div>
 
         </div>
     </main>
 
-    <footer class="text-center py-12 text-gray-500 border-t border-gray-800 bg-gray-900">
+    <footer class="text-center py-12 text-gray-500 border-t border-gray-800 bg-gray-900 mt-12">
         <p class="text-sm">© 2026 BlocStore</p>
         <p class="font-semibold text-blue-400 mt-1">Proposé par BlocPlay Studios</p>
     </footer>
