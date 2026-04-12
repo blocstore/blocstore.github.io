@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlocStore | Accueil</title>
     
+    <link rel="icon" type="image/x-icon" href="/logo.ico">
+    <link rel="apple-touch-icon" href="/logo.png">
+    
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#2563eb">
     
@@ -14,7 +17,7 @@
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         
-        /* Taille fixe des cartes pour le carrousel */
+        /* Taille fixe des cartes pour le carrousel horizontal */
         .app-card { min-width: 160px; max-width: 160px; transition: all 0.2s ease-in-out; }
         .app-card:hover { background-color: #2d3748; transform: translateY(-3px); }
 
@@ -27,7 +30,10 @@
 
     <nav class="bg-gray-800 p-4 border-b border-blue-600 sticky top-0 z-50 shadow-xl">
         <div class="container mx-auto flex justify-between items-center px-2">
-            <h1 class="text-xl font-black tracking-tighter text-blue-400">BLOC<span class="text-white">STORE</span></h1>
+            <div class="flex items-center space-x-2">
+                <img src="/logo.png" alt="Logo" class="w-8 h-8 object-contain">
+                <h1 class="text-xl font-black tracking-tighter text-blue-400">BLOC<span class="text-white">STORE</span></h1>
+            </div>
             
             <div class="flex items-center space-x-3">
                 <a href="#" class="bg-blue-600 px-4 py-1.5 rounded-full hover:bg-blue-700 transition font-bold text-sm">
@@ -74,43 +80,43 @@
     <section class="container mx-auto py-4">
         <div class="flex items-center mb-6 px-6">
             <div class="h-6 w-1 bg-blue-500 rounded-full mr-3 shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
-            <h2 class="text-lg font-bold uppercase tracking-tight">Populaire</h2>
+            <h2 class="text-lg font-bold uppercase tracking-tight text-white">Populaire</h2>
         </div>
 
         <div class="flex overflow-x-auto gap-4 px-6 pb-6 hide-scrollbar">
             <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center shadow-lg">
                 <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-600 rounded-2xl mb-3 flex items-center justify-center text-3xl shadow-inner">🔥</div>
-                <h3 class="text-sm font-bold truncate w-full">Mega Blast</h3>
+                <h3 class="text-sm font-bold truncate w-full text-white">Mega Blast</h3>
                 <p class="text-blue-400 text-[10px] font-bold mb-4 uppercase">1.2M DL</p>
                 <button class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white py-1.5 rounded-lg text-xs font-bold transition border border-blue-600/30">Voir</button>
             </div>
             <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center shadow-lg">
                 <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-2xl mb-3 flex items-center justify-center text-3xl">🚀</div>
-                <h3 class="text-sm font-bold truncate w-full">Space Drift</h3>
+                <h3 class="text-sm font-bold truncate w-full text-white">Space Drift</h3>
                 <p class="text-blue-400 text-[10px] font-bold mb-4 uppercase">850K DL</p>
                 <button class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white py-1.5 rounded-lg text-xs font-bold transition border border-blue-600/30">Voir</button>
             </div>
             <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center shadow-lg">
                 <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-600 rounded-2xl mb-3 flex items-center justify-center text-3xl">🌲</div>
-                <h3 class="text-sm font-bold truncate w-full">Craft World</h3>
+                <h3 class="text-sm font-bold truncate w-full text-white">Craft World</h3>
                 <p class="text-blue-400 text-[10px] font-bold mb-4 uppercase">2.5M DL</p>
                 <button class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white py-1.5 rounded-lg text-xs font-bold transition border border-blue-600/30">Voir</button>
             </div>
             <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center shadow-lg">
                 <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-600 rounded-2xl mb-3 flex items-center justify-center text-3xl">🎵</div>
-                <h3 class="text-sm font-bold truncate w-full">Beat Studio</h3>
+                <h3 class="text-sm font-bold truncate w-full text-white">Beat Studio</h3>
                 <p class="text-blue-400 text-[10px] font-bold mb-4 uppercase">500K DL</p>
                 <button class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white py-1.5 rounded-lg text-xs font-bold transition border border-blue-600/30">Voir</button>
             </div>
             <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center shadow-lg">
                 <div class="w-16 h-16 bg-gradient-to-br from-red-400 to-red-700 rounded-2xl mb-3 flex items-center justify-center text-3xl">🛡️</div>
-                <h3 class="text-sm font-bold truncate w-full">Bloc Guard</h3>
+                <h3 class="text-sm font-bold truncate w-full text-white">Bloc Guard</h3>
                 <p class="text-blue-400 text-[10px] font-bold mb-4 uppercase">100K DL</p>
                 <button class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white py-1.5 rounded-lg text-xs font-bold transition border border-blue-600/30">Voir</button>
             </div>
 
             <a href="/popular" class="app-card bg-gray-800/50 rounded-2xl p-4 border-2 border-dashed border-gray-700 flex flex-col items-center justify-center text-center hover:border-blue-500 transition group">
-                <div class="w-10 h-10 bg-gray-700 rounded-full mb-3 flex items-center justify-center group-hover:bg-blue-600 transition">
+                <div class="w-10 h-10 bg-gray-700 rounded-full mb-3 flex items-center justify-center group-hover:bg-blue-600 transition text-white">
                     <span class="text-lg">➔</span>
                 </div>
                 <span class="text-xs font-bold text-gray-500 group-hover:text-white uppercase tracking-tighter">Voir plus</span>
@@ -121,43 +127,43 @@
     <section class="container mx-auto py-4 mt-4">
         <div class="flex items-center mb-6 px-6">
             <div class="h-6 w-1 bg-yellow-500 rounded-full mr-3 shadow-[0_0_10px_rgba(234,179,8,0.5)]"></div>
-            <h2 class="text-lg font-bold uppercase tracking-tight">Mieux notés</h2>
+            <h2 class="text-lg font-bold uppercase tracking-tight text-white">Mieux notés</h2>
         </div>
 
         <div class="flex overflow-x-auto gap-4 px-6 pb-6 hide-scrollbar">
             <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center shadow-lg">
-                <div class="w-16 h-16 bg-gray-700 rounded-2xl mb-3 flex items-center justify-center text-3xl">🧠</div>
-                <h3 class="text-sm font-bold truncate w-full">Quiz Master</h3>
-                <p class="text-yellow-400 text-[10px] font-bold mb-4 uppercase tracking-tighter">⭐ 4.9/5</p>
+                <div class="w-16 h-16 bg-gray-700 rounded-2xl mb-3 flex items-center justify-center text-3xl shadow-inner">🧠</div>
+                <h3 class="text-sm font-bold truncate w-full text-white">Quiz Master</h3>
+                <p class="text-yellow-400 text-[10px] font-bold mb-4 uppercase">⭐ 4.9/5</p>
                 <button class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white py-1.5 rounded-lg text-xs font-bold transition border border-blue-600/30">Voir</button>
             </div>
             <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center shadow-lg">
-                <div class="w-16 h-16 bg-gray-700 rounded-2xl mb-3 flex items-center justify-center text-3xl">🎨</div>
-                <h3 class="text-sm font-bold truncate w-full">Draw It</h3>
-                <p class="text-yellow-400 text-[10px] font-bold mb-4 uppercase tracking-tighter">⭐ 4.8/5</p>
+                <div class="w-16 h-16 bg-gray-700 rounded-2xl mb-3 flex items-center justify-center text-3xl shadow-inner">🎨</div>
+                <h3 class="text-sm font-bold truncate w-full text-white">Draw It</h3>
+                <p class="text-yellow-400 text-[10px] font-bold mb-4 uppercase">⭐ 4.8/5</p>
                 <button class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white py-1.5 rounded-lg text-xs font-bold transition border border-blue-600/30">Voir</button>
             </div>
             <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center shadow-lg">
-                <div class="w-16 h-16 bg-gray-700 rounded-2xl mb-3 flex items-center justify-center text-3xl">🧩</div>
-                <h3 class="text-sm font-bold truncate w-full">Logic Bloc</h3>
-                <p class="text-yellow-400 text-[10px] font-bold mb-4 uppercase tracking-tighter">⭐ 4.8/5</p>
+                <div class="w-16 h-16 bg-gray-700 rounded-2xl mb-3 flex items-center justify-center text-3xl shadow-inner">🧩</div>
+                <h3 class="text-sm font-bold truncate w-full text-white">Logic Bloc</h3>
+                <p class="text-yellow-400 text-[10px] font-bold mb-4 uppercase">⭐ 4.8/5</p>
                 <button class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white py-1.5 rounded-lg text-xs font-bold transition border border-blue-600/30">Voir</button>
             </div>
             <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center shadow-lg">
-                <div class="w-16 h-16 bg-gray-700 rounded-2xl mb-3 flex items-center justify-center text-3xl">☁️</div>
-                <h3 class="text-sm font-bold truncate w-full">Cloud Notes</h3>
-                <p class="text-yellow-400 text-[10px] font-bold mb-4 uppercase tracking-tighter">⭐ 4.7/5</p>
+                <div class="w-16 h-16 bg-gray-700 rounded-2xl mb-3 flex items-center justify-center text-3xl shadow-inner">☁️</div>
+                <h3 class="text-sm font-bold truncate w-full text-white">Cloud Notes</h3>
+                <p class="text-yellow-400 text-[10px] font-bold mb-4 uppercase">⭐ 4.7/5</p>
                 <button class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white py-1.5 rounded-lg text-xs font-bold transition border border-blue-600/30">Voir</button>
             </div>
             <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center shadow-lg">
-                <div class="w-16 h-16 bg-gray-700 rounded-2xl mb-3 flex items-center justify-center text-3xl">🍳</div>
-                <h3 class="text-sm font-bold truncate w-full">Chef Bloc</h3>
-                <p class="text-yellow-400 text-[10px] font-bold mb-4 uppercase tracking-tighter">⭐ 4.7/5</p>
+                <div class="w-16 h-16 bg-gray-700 rounded-2xl mb-3 flex items-center justify-center text-3xl shadow-inner">🍳</div>
+                <h3 class="text-sm font-bold truncate w-full text-white">Chef Bloc</h3>
+                <p class="text-yellow-400 text-[10px] font-bold mb-4 uppercase">⭐ 4.7/5</p>
                 <button class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white py-1.5 rounded-lg text-xs font-bold transition border border-blue-600/30">Voir</button>
             </div>
 
             <a href="/rated/better" class="app-card bg-gray-800/50 rounded-2xl p-4 border-2 border-dashed border-gray-700 flex flex-col items-center justify-center text-center hover:border-blue-500 transition group">
-                <div class="w-10 h-10 bg-gray-700 rounded-full mb-3 flex items-center justify-center group-hover:bg-blue-600 transition">
+                <div class="w-10 h-10 bg-gray-700 rounded-full mb-3 flex items-center justify-center group-hover:bg-blue-600 transition text-white">
                     <span class="text-lg">➔</span>
                 </div>
                 <span class="text-xs font-bold text-gray-500 group-hover:text-white uppercase tracking-tighter">Voir plus</span>
@@ -165,7 +171,7 @@
         </div>
     </section>
 
-    <footer class="text-center py-10 text-gray-600 border-t border-gray-800 bg-gray-900 mt-8">
+    <footer class="text-center py-12 text-gray-600 border-t border-gray-800 bg-gray-900 mt-12">
         <p class="text-[10px] uppercase tracking-widest mb-1">© 2026 BlocStore</p>
         <p class="text-xs font-bold text-blue-500/50 uppercase tracking-tighter">Proposé par BlocPlay Studios</p>
     </footer>
@@ -190,9 +196,11 @@
         // Enregistrement PWA (Service Worker)
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js').catch(err => console.log(err));
+                navigator.serviceWorker.register('/sw.js')
+                .then(reg => console.log('SW enregistré !'))
+                .catch(err => console.log('Erreur SW:', err));
             });
         }
     </script>
 </body>
-</html>
+                </html>
