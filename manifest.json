@@ -1,6 +1,6 @@
 {
-  "name": "BlocStore",
-  "short_name": "BlocStore - Discover your next favorite apps",
+  "name": "BlocStore - Discover your next favorites apps",
+  "short_name": "BlocStore",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#111827",
