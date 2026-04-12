@@ -1,1 +1,70 @@
-caca
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlocStore | Votre Hub d'Applications</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .app-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+    <nav class="bg-gray-800 p-4 border-b border-blue-500">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold tracking-tighter text-blue-400">BLOC<span class="text-white">STORE</span></h1>
+            <div class="space-x-6">
+                <a href="#" class="hover:text-blue-400">Jeux</a>
+                <a href="#" class="hover:text-blue-400">Apps</a>
+                <a href="#" class="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700">S'abonner</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="py-16 text-center bg-gradient-to-b from-gray-800 to-gray-900">
+        <h2 class="text-5xl font-extrabold mb-4">Explorez le futur du Web</h2>
+        <p class="text-gray-400 text-xl">Des applications performantes, sans compromis.</p>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <div class="app-card bg-gray-800 rounded-2xl p-6 border border-gray-700">
+                <div class="w-16 h-16 bg-blue-500 rounded-xl mb-4 flex items-center justify-center text-3xl">🎮</div>
+                <h3 class="text-xl font-bold mb-2">Block Runner</h3>
+                <p class="text-gray-400 text-sm mb-4">Un jeu de course infini au design minimaliste.</p>
+                <button class="w-full bg-gray-700 hover:bg-blue-600 py-2 rounded-lg font-semibold transition">Installer</button>
+            </div>
+
+            <div class="app-card bg-gray-800 rounded-2xl p-6 border border-gray-700">
+                <div class="w-16 h-16 bg-purple-500 rounded-xl mb-4 flex items-center justify-center text-3xl">🛡️</div>
+                <h3 class="text-xl font-bold mb-2">Vault Guard</h3>
+                <p class="text-gray-400 text-sm mb-4">Gérez vos mots de passe en toute sécurité.</p>
+                <button class="w-full bg-gray-700 hover:bg-blue-600 py-2 rounded-lg font-semibold transition">Installer</button>
+            </div>
+
+            <div class="app-card bg-gray-800 rounded-2xl p-6 border border-gray-700">
+                <div class="w-16 h-16 bg-green-500 rounded-xl mb-4 flex items-center justify-center text-3xl">📊</div>
+                <h3 class="text-xl font-bold mb-2">Data Bloc</h3>
+                <p class="text-gray-400 text-sm mb-4">Visualisez vos statistiques en temps réel.</p>
+                <button class="w-full bg-gray-700 hover:bg-blue-600 py-2 rounded-lg font-semibold transition">Installer</button>
+            </div>
+
+            <div class="app-card bg-gray-800 rounded-2xl p-6 border border-gray-700">
+                <div class="w-16 h-16 bg-red-500 rounded-xl mb-4 flex items-center justify-center text-3xl">⚡</div>
+                <h3 class="text-xl font-bold mb-2">Turbo Edit</h3>
+                <p class="text-gray-400 text-sm mb-4">Éditeur de code ultra-rapide pour mobile.</p>
+                <button class="w-full bg-gray-700 hover:bg-blue-600 py-2 rounded-lg font-semibold transition">Installer</button>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="text-center py-10 text-gray-500 border-t border-gray-800">
+        <p>&copy; 2026 BlocStore - Propulsé par GitHub Pages</p>
+    </footer>
+
+</body>
+</html>
