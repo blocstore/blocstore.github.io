@@ -5,65 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlocStore | Votre Hub d'Applications</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .app-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+        /* Empêche le chevauchement sur les très petits écrans */
+        .nav-links { gap: 1rem; }
     </style>
 </head>
 <body class="bg-gray-900 text-white font-sans">
 
-    <nav class="bg-gray-800 p-4 border-b border-blue-500">
-        <div class="container mx-auto flex justify-between items-center">
+    <nav class="bg-gray-800 p-4 border-b border-blue-500 sticky top-0 z-50">
+        <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
             <h1 class="text-2xl font-bold tracking-tighter text-blue-400">BLOC<span class="text-white">STORE</span></h1>
-            <div class="space-x-6">
-                <a href="#" class="hover:text-blue-400">Jeux</a>
-                <a href="#" class="hover:text-blue-400">Apps</a>
-                <a href="#" class="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700">S'abonner</a>
+            
+            <div class="flex items-center space-x-4 sm:space-x-8 text-sm sm:text-base">
+                <a href="#" class="hover:text-blue-400 transition">Jeux</a>
+                <a href="#" class="hover:text-blue-400 transition">Apps</a>
+                <a href="#" class="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition font-bold shadow-lg shadow-blue-900/20">
+                    S'abonner
+                </a>
             </div>
         </div>
     </nav>
 
-    <header class="py-16 text-center bg-gradient-to-b from-gray-800 to-gray-900">
-        <h2 class="text-5xl font-extrabold mb-4">Explorez le futur du Web</h2>
-        <p class="text-gray-400 text-xl">Des applications performantes, sans compromis.</p>
+    <header class="py-12 sm:py-20 text-center bg-gradient-to-b from-gray-800 to-gray-900 px-4">
+        <h2 class="text-4xl sm:text-6xl font-extrabold mb-4 leading-tight">Explorez le futur <br class="sm:hidden"> du Web</h2>
+        <p class="text-gray-400 text-lg sm:text-xl max-w-2xl mx-auto">Des applications performantes, sélectionnées par des passionnés.</p>
     </header>
 
-    <main class="container mx-auto px-4 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <main class="container mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
-            <div class="app-card bg-gray-800 rounded-2xl p-6 border border-gray-700">
-                <div class="w-16 h-16 bg-blue-500 rounded-xl mb-4 flex items-center justify-center text-3xl">🎮</div>
+            <div class="app-card bg-gray-800 rounded-2xl p-6 border border-gray-700 flex flex-col items-center text-center sm:items-start sm:text-left">
+                <div class="w-16 h-16 bg-blue-500 rounded-2xl mb-4 flex items-center justify-center text-3xl shadow-lg">🎮</div>
                 <h3 class="text-xl font-bold mb-2">Block Runner</h3>
-                <p class="text-gray-400 text-sm mb-4">Un jeu de course infini au design minimaliste.</p>
-                <button class="w-full bg-gray-700 hover:bg-blue-600 py-2 rounded-lg font-semibold transition">Installer</button>
+                <p class="text-gray-400 text-sm mb-6 flex-grow">Un jeu de course infini au design minimaliste.</p>
+                <button class="w-full bg-gray-700 hover:bg-blue-600 py-3 rounded-xl font-bold transition">Installer</button>
             </div>
 
-            <div class="app-card bg-gray-800 rounded-2xl p-6 border border-gray-700">
-                <div class="w-16 h-16 bg-purple-500 rounded-xl mb-4 flex items-center justify-center text-3xl">🛡️</div>
+            <div class="app-card bg-gray-800 rounded-2xl p-6 border border-gray-700 flex flex-col items-center text-center sm:items-start sm:text-left">
+                <div class="w-16 h-16 bg-purple-500 rounded-2xl mb-4 flex items-center justify-center text-3xl shadow-lg">🛡️</div>
                 <h3 class="text-xl font-bold mb-2">Vault Guard</h3>
-                <p class="text-gray-400 text-sm mb-4">Gérez vos mots de passe en toute sécurité.</p>
-                <button class="w-full bg-gray-700 hover:bg-blue-600 py-2 rounded-lg font-semibold transition">Installer</button>
+                <p class="text-gray-400 text-sm mb-6 flex-grow">Gérez vos mots de passe en toute sécurité.</p>
+                <button class="w-full bg-gray-700 hover:bg-blue-600 py-3 rounded-xl font-bold transition">Installer</button>
             </div>
 
-            <div class="app-card bg-gray-800 rounded-2xl p-6 border border-gray-700">
-                <div class="w-16 h-16 bg-green-500 rounded-xl mb-4 flex items-center justify-center text-3xl">📊</div>
+            <div class="app-card bg-gray-800 rounded-2xl p-6 border border-gray-700 flex flex-col items-center text-center sm:items-start sm:text-left">
+                <div class="w-16 h-16 bg-green-500 rounded-2xl mb-4 flex items-center justify-center text-3xl shadow-lg">📊</div>
                 <h3 class="text-xl font-bold mb-2">Data Bloc</h3>
-                <p class="text-gray-400 text-sm mb-4">Visualisez vos statistiques en temps réel.</p>
-                <button class="w-full bg-gray-700 hover:bg-blue-600 py-2 rounded-lg font-semibold transition">Installer</button>
+                <p class="text-gray-400 text-sm mb-6 flex-grow">Visualisez vos statistiques en temps réel.</p>
+                <button class="w-full bg-gray-700 hover:bg-blue-600 py-3 rounded-xl font-bold transition">Installer</button>
             </div>
 
-            <div class="app-card bg-gray-800 rounded-2xl p-6 border border-gray-700">
-                <div class="w-16 h-16 bg-red-500 rounded-xl mb-4 flex items-center justify-center text-3xl">⚡</div>
+            <div class="app-card bg-gray-800 rounded-2xl p-6 border border-gray-700 flex flex-col items-center text-center sm:items-start sm:text-left">
+                <div class="w-16 h-16 bg-red-500 rounded-2xl mb-4 flex items-center justify-center text-3xl shadow-lg">⚡</div>
                 <h3 class="text-xl font-bold mb-2">Turbo Edit</h3>
-                <p class="text-gray-400 text-sm mb-4">Éditeur de code ultra-rapide pour mobile.</p>
-                <button class="w-full bg-gray-700 hover:bg-blue-600 py-2 rounded-lg font-semibold transition">Installer</button>
+                <p class="text-gray-400 text-sm mb-6 flex-grow">Éditeur de code ultra-rapide pour mobile.</p>
+                <button class="w-full bg-gray-700 hover:bg-blue-600 py-3 rounded-xl font-bold transition">Installer</button>
             </div>
 
         </div>
     </main>
 
-    <footer class="text-center py-10 text-gray-500 border-t border-gray-800">
-        <p>&copy; 2026 BlocStore - Propulsé par GitHub Pages</p>
+    <footer class="text-center py-12 text-gray-500 border-t border-gray-800 bg-gray-900">
+        <p class="text-sm">© 2026 BlocStore</p>
+        <p class="font-semibold text-blue-400 mt-1">Proposé par BlocPlay Studios</p>
     </footer>
 
 </body>
