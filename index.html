@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlocStore | Accueil</title>
+    
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2563eb">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Cache la barre de défilement tout en gardant le scroll */
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         
-        .app-card { min-width: 160px; max-width: 160px; transition: all 0.2s; }
-        .app-card:hover { background-color: #2d3748; transform: translateY(-2px); }
+        /* Taille fixe des cartes pour le carrousel */
+        .app-card { min-width: 160px; max-width: 160px; transition: all 0.2s ease-in-out; }
+        .app-card:hover { background-color: #2d3748; transform: translateY(-3px); }
 
-        #mobile-menu { transition: transform 0.3s ease-in-out; }
+        /* Animation du menu latéral */
+        #mobile-menu { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
         .menu-hidden { transform: translateX(100%); }
     </style>
 </head>
@@ -47,10 +54,10 @@
         <div class="flex flex-col space-y-6">
             <h3 class="text-gray-500 text-xs font-bold uppercase tracking-widest">Catégories</h3>
             <a href="/applications" class="text-xl font-bold hover:text-blue-400 transition flex items-center">
-                <span class="mr-3 text-lg text-blue-500">📱</span> Applications
+                <span class="mr-3 text-lg">📱</span> Applications
             </a>
             <a href="/games" class="text-xl font-bold hover:text-blue-400 transition flex items-center">
-                <span class="mr-3 text-lg text-blue-500">🎮</span> Jeux
+                <span class="mr-3 text-lg">🎮</span> Jeux
             </a>
             <hr class="border-gray-700">
             <p class="text-[10px] text-gray-500 uppercase">BlocPlay Studios v1.0</p>
@@ -61,7 +68,7 @@
 
     <header class="py-8 text-center bg-gray-900 px-4">
         <h2 class="text-3xl font-extrabold mb-1">BlocStore</h2>
-        <p class="text-gray-500 text-xs uppercase tracking-[0.2em] font-bold">BlocPlay Studios</p>
+        <p class="text-gray-500 text-xs uppercase tracking-[0.2em] font-bold">Proposé par BlocPlay Studios</p>
     </header>
 
     <section class="container mx-auto py-4">
@@ -73,14 +80,32 @@
         <div class="flex overflow-x-auto gap-4 px-6 pb-6 hide-scrollbar">
             <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center shadow-lg">
                 <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-600 rounded-2xl mb-3 flex items-center justify-center text-3xl shadow-inner">🔥</div>
-                <h3 class="text-sm font-bold truncate w-full text-gray-100">Mega Blast</h3>
-                <p class="text-blue-400 text-[10px] font-bold mb-4 uppercase tracking-tighter">1.2M DL</p>
+                <h3 class="text-sm font-bold truncate w-full">Mega Blast</h3>
+                <p class="text-blue-400 text-[10px] font-bold mb-4 uppercase">1.2M DL</p>
                 <button class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white py-1.5 rounded-lg text-xs font-bold transition border border-blue-600/30">Voir</button>
             </div>
             <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center shadow-lg">
                 <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-2xl mb-3 flex items-center justify-center text-3xl">🚀</div>
-                <h3 class="text-sm font-bold truncate w-full text-gray-100">Space Drift</h3>
-                <p class="text-blue-400 text-[10px] font-bold mb-4 uppercase tracking-tighter">850K DL</p>
+                <h3 class="text-sm font-bold truncate w-full">Space Drift</h3>
+                <p class="text-blue-400 text-[10px] font-bold mb-4 uppercase">850K DL</p>
+                <button class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white py-1.5 rounded-lg text-xs font-bold transition border border-blue-600/30">Voir</button>
+            </div>
+            <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center shadow-lg">
+                <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-600 rounded-2xl mb-3 flex items-center justify-center text-3xl">🌲</div>
+                <h3 class="text-sm font-bold truncate w-full">Craft World</h3>
+                <p class="text-blue-400 text-[10px] font-bold mb-4 uppercase">2.5M DL</p>
+                <button class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white py-1.5 rounded-lg text-xs font-bold transition border border-blue-600/30">Voir</button>
+            </div>
+            <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center shadow-lg">
+                <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-600 rounded-2xl mb-3 flex items-center justify-center text-3xl">🎵</div>
+                <h3 class="text-sm font-bold truncate w-full">Beat Studio</h3>
+                <p class="text-blue-400 text-[10px] font-bold mb-4 uppercase">500K DL</p>
+                <button class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white py-1.5 rounded-lg text-xs font-bold transition border border-blue-600/30">Voir</button>
+            </div>
+            <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center shadow-lg">
+                <div class="w-16 h-16 bg-gradient-to-br from-red-400 to-red-700 rounded-2xl mb-3 flex items-center justify-center text-3xl">🛡️</div>
+                <h3 class="text-sm font-bold truncate w-full">Bloc Guard</h3>
+                <p class="text-blue-400 text-[10px] font-bold mb-4 uppercase">100K DL</p>
                 <button class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white py-1.5 rounded-lg text-xs font-bold transition border border-blue-600/30">Voir</button>
             </div>
 
@@ -102,8 +127,32 @@
         <div class="flex overflow-x-auto gap-4 px-6 pb-6 hide-scrollbar">
             <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center shadow-lg">
                 <div class="w-16 h-16 bg-gray-700 rounded-2xl mb-3 flex items-center justify-center text-3xl">🧠</div>
-                <h3 class="text-sm font-bold truncate w-full text-gray-100">Quiz Master</h3>
+                <h3 class="text-sm font-bold truncate w-full">Quiz Master</h3>
                 <p class="text-yellow-400 text-[10px] font-bold mb-4 uppercase tracking-tighter">⭐ 4.9/5</p>
+                <button class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white py-1.5 rounded-lg text-xs font-bold transition border border-blue-600/30">Voir</button>
+            </div>
+            <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center shadow-lg">
+                <div class="w-16 h-16 bg-gray-700 rounded-2xl mb-3 flex items-center justify-center text-3xl">🎨</div>
+                <h3 class="text-sm font-bold truncate w-full">Draw It</h3>
+                <p class="text-yellow-400 text-[10px] font-bold mb-4 uppercase tracking-tighter">⭐ 4.8/5</p>
+                <button class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white py-1.5 rounded-lg text-xs font-bold transition border border-blue-600/30">Voir</button>
+            </div>
+            <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center shadow-lg">
+                <div class="w-16 h-16 bg-gray-700 rounded-2xl mb-3 flex items-center justify-center text-3xl">🧩</div>
+                <h3 class="text-sm font-bold truncate w-full">Logic Bloc</h3>
+                <p class="text-yellow-400 text-[10px] font-bold mb-4 uppercase tracking-tighter">⭐ 4.8/5</p>
+                <button class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white py-1.5 rounded-lg text-xs font-bold transition border border-blue-600/30">Voir</button>
+            </div>
+            <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center shadow-lg">
+                <div class="w-16 h-16 bg-gray-700 rounded-2xl mb-3 flex items-center justify-center text-3xl">☁️</div>
+                <h3 class="text-sm font-bold truncate w-full">Cloud Notes</h3>
+                <p class="text-yellow-400 text-[10px] font-bold mb-4 uppercase tracking-tighter">⭐ 4.7/5</p>
+                <button class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white py-1.5 rounded-lg text-xs font-bold transition border border-blue-600/30">Voir</button>
+            </div>
+            <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center shadow-lg">
+                <div class="w-16 h-16 bg-gray-700 rounded-2xl mb-3 flex items-center justify-center text-3xl">🍳</div>
+                <h3 class="text-sm font-bold truncate w-full">Chef Bloc</h3>
+                <p class="text-yellow-400 text-[10px] font-bold mb-4 uppercase tracking-tighter">⭐ 4.7/5</p>
                 <button class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white py-1.5 rounded-lg text-xs font-bold transition border border-blue-600/30">Voir</button>
             </div>
 
@@ -118,10 +167,11 @@
 
     <footer class="text-center py-10 text-gray-600 border-t border-gray-800 bg-gray-900 mt-8">
         <p class="text-[10px] uppercase tracking-widest mb-1">© 2026 BlocStore</p>
-        <p class="text-xs font-bold text-blue-500/50">Proposé par BlocPlay Studios</p>
+        <p class="text-xs font-bold text-blue-500/50 uppercase tracking-tighter">Proposé par BlocPlay Studios</p>
     </footer>
 
     <script>
+        // Gestion du menu Hamburger
         const menuBtn = document.getElementById('menu-btn');
         const closeBtn = document.getElementById('close-menu');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -130,11 +180,19 @@
         function toggleMenu() {
             mobileMenu.classList.toggle('menu-hidden');
             overlay.classList.toggle('hidden');
+            document.body.classList.toggle('overflow-hidden');
         }
 
         menuBtn.addEventListener('click', toggleMenu);
         closeBtn.addEventListener('click', toggleMenu);
         overlay.addEventListener('click', toggleMenu);
+
+        // Enregistrement PWA (Service Worker)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').catch(err => console.log(err));
+            });
+        }
     </script>
 </body>
 </html>
