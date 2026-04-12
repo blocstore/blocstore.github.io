@@ -3,50 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlocStore Windows | Home</title>
+    <title>BlocStore | Windows</title>
     <link rel="icon" type="image/x-icon" href="../logo.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .hide-scrollbar::-webkit-scrollbar { display: none; }
-        .app-card { min-width: 180px; transition: all 0.2s; }
-        .app-card:hover { transform: scale(1.02); background: #1f2937; border-color: #3b82f6; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .app-card { min-width: 160px; max-width: 160px; transition: all 0.2s; }
+        .app-card:hover { background-color: #2d3748; transform: translateY(-3px); }
     </style>
     <script>
-        // Redirection si on n'est pas sur Windows
         if (!/Win/.test(window.navigator.platform)) { window.location.href = "/"; }
     </script>
 </head>
-<body class="bg-gray-900 text-white font-sans selection:bg-blue-500">
+<body class="bg-gray-900 text-white font-sans overflow-x-hidden">
 
-    <nav class="bg-gray-800/50 backdrop-blur-md p-4 border-b border-blue-600 sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center px-4">
-            <div class="flex items-center space-x-3">
-                <img src="../logo.png" class="w-8 h-8" alt="Logo">
-                <h1 class="text-xl font-black tracking-tighter">BLOC<span class="text-blue-500">STORE</span> <span class="text-[10px] bg-blue-600 px-2 py-0.5 rounded ml-2">PC</span></h1>
+    <nav class="bg-gray-800 p-4 border-b border-blue-600 sticky top-0 z-50 shadow-xl">
+        <div class="container mx-auto flex justify-between items-center px-2">
+            <div class="flex items-center space-x-2">
+                <img src="../logo.png" alt="Logo" class="w-8 h-8 object-contain">
+                <h1 class="text-xl font-black tracking-tighter text-blue-400">BLOC<span class="text-white">STORE</span> <span class="text-[10px] bg-blue-600 text-white px-2 py-0.5 rounded ml-2 uppercase">Windows</span></h1>
             </div>
-            <div class="flex items-center space-x-4">
-                <a href="/applications" class="hover:text-blue-400 font-bold text-sm">Apps</a>
-                <a href="/games" class="hover:text-blue-400 font-bold text-sm">Jeux</a>
-                <button class="bg-blue-600 px-4 py-1.5 rounded-lg font-bold text-sm hover:bg-blue-700 transition">Se connecter</button>
+            <div class="flex items-center space-x-3">
+                <a href="#" class="bg-blue-600 px-4 py-1.5 rounded-full hover:bg-blue-700 transition font-bold text-sm">Se connecter</a>
             </div>
         </div>
     </nav>
 
-    <header class="py-12 text-center">
-        <h2 class="text-4xl font-black mb-2">Applications Windows</h2>
-        <p class="text-gray-400">Le meilleur du logiciel par BlocPlay Studios</p>
+    <header class="py-8 text-center bg-gray-900">
+        <h2 class="text-3xl font-extrabold mb-1">BlocStore PC</h2>
+        <p class="text-gray-500 text-xs uppercase tracking-[0.2em] font-bold">Édition Windows</p>
     </header>
 
-    <section class="container mx-auto px-6 mb-12">
-        <h3 class="text-xl font-bold mb-6 border-l-4 border-blue-600 pl-4 uppercase tracking-widest text-sm">À la une</h3>
-        <div class="flex gap-6 overflow-x-auto pb-4 hide-scrollbar">
-            <div class="app-card bg-gray-800 p-5 rounded-3xl border border-gray-700 flex flex-col items-center">
-                <img src="../assets/icons/blocplay.png" class="w-20 h-20 rounded-2xl mb-4 shadow-xl" alt="BlocPlay">
-                <h4 class="font-bold">BlocPlay</h4>
-                <p class="text-[10px] text-blue-400 mb-4 uppercase font-bold">Launcher Officiel</p>
-                <a href="/windows/blocplay" class="w-full bg-blue-600 py-2 rounded-xl text-xs font-bold text-center">Voir</a>
+    <section class="container mx-auto py-4">
+        <div class="flex items-center mb-6 px-6"><div class="h-6 w-1 bg-blue-500 rounded-full mr-3"></div><h2 class="text-lg font-bold uppercase tracking-tight">Populaire</h2></div>
+        <div class="flex overflow-x-auto gap-4 px-6 pb-6 hide-scrollbar">
+            <div class="app-card bg-gray-800 rounded-2xl p-4 border border-gray-700 flex flex-col items-center text-center">
+                <img src="../assets/icons/blocplay.png" class="w-16 h-16 rounded-2xl mb-3 shadow-lg">
+                <h3 class="text-sm font-bold truncate w-full">BlocPlay</h3>
+                <p class="text-blue-400 text-[10px] font-bold mb-4 uppercase">Launcher</p>
+                <a href="/windows/blocplay" class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white py-1.5 rounded-lg text-xs font-bold transition border border-blue-600/30 text-center">Voir</a>
             </div>
-            </div>
+            <a href="/popular" class="app-card bg-gray-800/50 rounded-2xl p-4 border-2 border-dashed border-gray-700 flex flex-col items-center justify-center text-center hover:border-blue-500 transition group">
+                <div class="w-10 h-10 bg-gray-700 rounded-full mb-3 flex items-center justify-center group-hover:bg-blue-600 transition"><span class="text-lg">➔</span></div>
+                <span class="text-xs font-bold text-gray-500 group-hover:text-white uppercase">Voir plus</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="container mx-auto py-4">
+        <div class="flex items-center mb-6 px-6"><div class="h-6 w-1 bg-yellow-500 rounded-full mr-3"></div><h2 class="text-lg font-bold uppercase tracking-tight">Mieux notés</h2></div>
+        <div class="flex overflow-x-auto gap-4 px-6 pb-6 hide-scrollbar">
+            <a href="/rated/better" class="app-card bg-gray-800/50 rounded-2xl p-4 border-2 border-dashed border-gray-700 flex flex-col items-center justify-center text-center hover:border-blue-500 transition group">
+                <div class="w-10 h-10 bg-gray-700 rounded-full mb-3 flex items-center justify-center group-hover:bg-blue-600 transition"><span class="text-lg">➔</span></div>
+                <span class="text-xs font-bold text-gray-500 group-hover:text-white uppercase">Voir plus</span>
+            </a>
+        </div>
     </section>
 
 </body>
