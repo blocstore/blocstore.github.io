@@ -1,9 +1,9 @@
 {
   "short_name": "BlocStore",
-  "name": "BlocStore - App Hub",
+  "name": "BlocStore - Discover your next favorite apps",
   "icons": [
     {
-      "src": "https://cdn-icons-png.flaticon.com/512/2586/2586488.png",
+      "src": "/logo.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any maskable"
@@ -13,6 +13,5 @@
   "background_color": "#111827",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#2563eb",
-  "description": "Store d'applications par BlocPlay Studios"
+  "theme_color": "#2563eb"
 }
