@@ -3,79 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlocPlay pour Windows | BlocStore</title>
+    <title>BlocPlay Windows | BlocStore</title>
     <link rel="icon" type="image/x-icon" href="../../logo.ico">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .hide-scrollbar::-webkit-scrollbar { display: none; }
-    </style>
 </head>
 <body class="bg-gray-900 text-white font-sans">
 
-    <nav class="p-4 sticky top-0 bg-gray-900/80 backdrop-blur-md z-50 flex items-center">
-        <a href="../../" class="p-2 hover:bg-gray-800 rounded-full transition text-blue-400">
+    <nav class="p-4 flex items-center bg-gray-800/50 sticky top-0 backdrop-blur-md border-b border-blue-600 z-50">
+        <a href="/windows" class="p-2 hover:bg-gray-700 rounded-full transition text-blue-400">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
         </a>
-        <h1 class="ml-4 font-bold text-lg">Détails de l'application</h1>
+        <h1 class="ml-4 font-bold">Détails de l'application</h1>
     </nav>
 
-    <main class="container mx-auto px-6 py-4">
-        
+    <main class="container mx-auto px-6 py-8">
         <div class="flex items-center space-x-6 mb-8">
             <img src="../../assets/icons/blocplay.png" alt="BlocPlay" class="w-24 h-24 rounded-3xl shadow-2xl border border-blue-500/30">
-            
-            <div class="flex-1">
-                <h2 class="text-3xl font-black tracking-tight text-white">BlocPlay</h2>
-                <p class="text-blue-400 font-bold uppercase text-xs tracking-widest">Édition Windows</p>
-                <p class="text-gray-500 text-sm">Par BlocPlay Studios</p>
+            <div>
+                <h2 class="text-3xl font-black text-white">BlocPlay</h2>
+                <p class="text-blue-400 font-bold text-xs uppercase tracking-widest">Édition Windows</p>
+                <p class="text-gray-500 text-sm italic">BlocPlay Studios</p>
             </div>
         </div>
 
-        <div class="mb-8">
-            <a href="LIEN_VERS_TON_EXE_OU_MSI" class="flex items-center justify-center space-x-3 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-2xl shadow-lg shadow-blue-600/20 transition-all active:scale-95">
+        <div class="mb-10">
+            <a href="/downloads/BlocPlaySetupInstaller.exe" class="flex items-center justify-center space-x-3 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-2xl shadow-lg transition-all active:scale-95">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1V11.719H0V3.449zm0 9.15l9.75.132V21.9L0 20.55V12.599zm10.665-10.597L24 0v11.719H10.665V2.002zm0 10.58l13.335.181V24l-13.335-1.847V12.582z"/></svg>
-                <span>Télécharger pour Windows</span>
+                <span>Installer sur PC (.exe)</span>
             </a>
-            <p class="text-center text-gray-500 text-[10px] mt-3 uppercase font-bold tracking-tighter">Fichier .exe certifié BlocPlay</p>
         </div>
 
-        <div class="grid grid-cols-3 gap-4 border-y border-gray-800 py-6 mb-8 text-center">
-            <div>
-                <p class="text-gray-500 text-[10px] uppercase font-bold mb-1">Architecture</p>
-                <p class="font-bold text-sm">x64 / ARM</p>
-            </div>
-            <div class="border-x border-gray-800">
-                <p class="text-gray-500 text-[10px] uppercase font-bold mb-1">Version</p>
-                <p class="font-bold text-sm">2.0.1</p>
-            </div>
-            <div>
-                <p class="text-gray-500 text-[10px] uppercase font-bold mb-1">OS Requis</p>
-                <p class="font-bold text-sm">Win 10+</p>
-            </div>
-        </div>
-
-        <div class="mb-8">
-            <h3 class="text-lg font-bold mb-3 flex items-center">
-                <span class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                À propos de BlocPlay
-            </h3>
-            <p class="text-gray-400 text-sm leading-relaxed">
-                Le hub ultime pour tous vos jeux et applications créés par BlocPlay Studios. Profitez d'une intégration parfaite avec votre PC, de mises à jour automatiques et d'une interface ultra-rapide conçue pour la performance.
-            </p>
-        </div>
-
-        <div class="flex flex-wrap gap-2 mb-10">
-            <span class="bg-gray-800 text-gray-400 text-[10px] px-3 py-1 rounded-full font-bold">GAMING</span>
-            <span class="bg-gray-800 text-gray-400 text-[10px] px-3 py-1 rounded-full font-bold">UTILITAIRE</span>
-            <span class="bg-gray-800 text-gray-400 text-[10px] px-3 py-1 rounded-full font-bold">OFFICIEL</span>
-        </div>
-
+        <h3 class="text-lg font-bold mb-3">Description</h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+            Lancez vos jeux et applications BlocPlay Studios directement depuis votre PC avec une performance optimisée pour Windows.
+        </p>
     </main>
-
-    <footer class="py-8 text-center border-t border-gray-800">
-        <img src="../../logo.png" class="w-6 h-6 mx-auto mb-2 opacity-30 grayscale">
-        <p class="text-gray-600 text-[10px] uppercase tracking-widest">BlocStore Windows Hub</p>
-    </footer>
 
 </body>
 </html>
