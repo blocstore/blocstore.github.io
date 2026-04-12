@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#2563eb">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlocStore | Windows</title>
@@ -61,5 +63,14 @@
         </div>
     </section>
 
+    <script>
+        // Enregistrement du Service Worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+            .then(() => console.log("BlocStore PWA : Prêt !"))
+            .catch((err) => console.log("Erreur PWA :", err));
+        }
+    </script>
+    
 </body>
 </html>
