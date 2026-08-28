@@ -40,7 +40,7 @@
     <section class="container mx-auto py-4">
         <div class="flex items-center mb-6 px-6"><div class="h-6 w-1 bg-blue-500 rounded-full mr-3"></div><h2 class="text-lg font-bold uppercase tracking-tight">Populaire</h2></div>
         <div class="flex overflow-x-auto gap-4 px-6 pb-6 hide-scrollbar">
-            
+
             <div class="app-card bg-gray-800 rounded-3xl p-4 border border-gray-700 flex flex-col items-center text-center">
                 <div class="relative">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" class="w-16 h-16 rounded-2xl mb-3 shadow-lg object-contain bg-white p-1">
@@ -68,7 +68,7 @@
     <section class="container mx-auto py-4">
         <div class="flex items-center mb-6 px-6"><div class="h-6 w-1 bg-yellow-500 rounded-full mr-3"></div><h2 class="text-lg font-bold uppercase tracking-tight">Mieux notés</h2></div>
         <div class="flex overflow-x-auto gap-4 px-6 pb-6 hide-scrollbar">
-            
+
             <div class="app-card bg-gray-800 rounded-3xl p-4 border border-gray-700 flex flex-col items-center text-center">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" class="w-16 h-16 rounded-2xl mb-3 shadow-lg object-contain bg-white p-1 border-2 border-yellow-500/50">
                 <h3 class="text-sm font-bold truncate w-full">YouTube</h3>
@@ -83,6 +83,22 @@
         </div>
     </section>
 
+    <div id="blocstoreNotice" class="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-[9999] p-4">
+        <div class="bg-gray-800 border border-gray-700 rounded-2xl max-w-md w-full p-6 shadow-2xl text-white">
+            <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-bold uppercase tracking-wider bg-red-500/20 text-red-400 border border-red-500/30 px-2.5 py-1 rounded-full">Information</span>
+            </div>
+            <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                Ce service est en arrêt et ne reçoit pas de nouveautés, il se peut que les applications ne soient pas mises à jours, que des fonctionnalités soient indisponibles et que le catalogue manque d'applications. Découvrez la nouvelle version de ce service en <a href="https://blocstore.github.io/new-features" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 underline font-semibold">cliquant ici</a>.
+            </p>
+            <div class="flex justify-end">
+                <button onclick="document.getElementById('blocstoreNotice').remove()" class="bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-bold text-xs py-2.5 px-5 rounded-xl transition-all">
+                    J'ai compris
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script>
         // Enregistrement du Service Worker
         if ('serviceWorker' in navigator) {
@@ -91,83 +107,6 @@
             .catch((err) => console.log("Erreur PWA :", err));
         }
     </script>
-
-<!-- Coller juste avant </body> -->
-<style>
-  #blocstoreNotice {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100vw !important;
-    height: 100vh !important;
-    background: rgba(0, 0, 0, 0.75) !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    z-index: 999999 !important;
-    padding: 16px !important;
-    box-sizing: border-box !important;
-  }
-
-  .bs-popup {
-    background-color: #121212 !important;
-    border: 1px solid #2a2a2a !important;
-    border-radius: 10px !important;
-    max-width: 440px !important;
-    width: 100% !important;
-    padding: 20px !important;
-    color: #ffffff !important;
-    font-family: system-ui, -apple-system, sans-serif !important;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
-  }
-
-  .bs-title {
-    font-size: 1.1rem !important;
-    font-weight: 700 !important;
-    margin-bottom: 12px !important;
-    color: #ffffff !important;
-  }
-
-  .bs-content {
-    font-size: 0.9rem !important;
-    line-height: 1.5 !important;
-    color: #cccccc !important;
-    margin-bottom: 20px !important;
-  }
-
-  .bs-content a {
-    color: #3b82f6 !important;
-    text-decoration: underline !important;
-  }
-
-  .bs-actions {
-    display: flex !important;
-    justify-content: flex-end !important;
-  }
-
-  .bs-btn {
-    background-color: #2563eb !important;
-    color: #ffffff !important;
-    border: none !important;
-    border-radius: 6px !important;
-    padding: 8px 16px !important;
-    font-size: 0.875rem !important;
-    font-weight: 600 !important;
-    cursor: pointer !important;
-  }
-</style>
-
-<div id="blocstoreNotice">
-  <div class="bs-popup">
-    <div class="bs-title">Information</div>
-    <div class="bs-content">
-      Ce service est en arrêt et ne reçoit pas de nouveautés, il se peut que les applications ne soient pas mises à jours, que des fonctionnalités soient indisponibles et que le catalogue manque d'applications. Découvrez la nouvelle version de ce service en <a href="https://blocstore.github.io/new-features" target="_blank" rel="noopener">cliquant ici</a>.
-    </div>
-    <div class="bs-actions">
-      <button class="bs-btn" onclick="document.getElementById('blocstoreNotice').style.display='none'">J'ai compris</button>
-    </div>
-  </div>
-</div>
 
 </body>
 </html>
