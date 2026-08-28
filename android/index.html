@@ -20,77 +20,6 @@
 </head>
 <body class="bg-gray-900 text-white font-sans overflow-x-hidden">
 
-    <nav class="bg-gray-800 p-4 border-b border-blue-600 sticky top-0 z-50 shadow-xl">
-        <div class="container mx-auto flex justify-between items-center px-2">
-            <div class="flex items-center space-x-2">
-                <img src="../logo.png" alt="Logo" class="w-8 h-8 object-contain">
-                <h1 class="text-xl font-black tracking-tighter text-blue-400">BLOC<span class="text-white">STORE</span> <span class="text-[10px] bg-green-600 text-white px-2 py-0.5 rounded ml-2 uppercase">Android</span></h1>
-            </div>
-            <button class="text-white p-2">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </div>
-    </nav>
-
-    <header class="py-8 text-center">
-        <h2 class="text-3xl font-extrabold mb-1 text-white">BlocStore Mobile</h2>
-        <p class="text-gray-500 text-xs uppercase font-bold tracking-widest">Store APK Officiel</p>
-    </header>
-
-    <section class="container mx-auto py-4">
-        <div class="flex items-center mb-6 px-6"><div class="h-6 w-1 bg-blue-500 rounded-full mr-3"></div><h2 class="text-lg font-bold uppercase tracking-tight">Populaire</h2></div>
-        <div class="flex overflow-x-auto gap-4 px-6 pb-6 hide-scrollbar">
-            
-            <div class="app-card bg-gray-800 rounded-3xl p-4 border border-gray-700 flex flex-col items-center text-center">
-                <div class="relative">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" class="w-16 h-16 rounded-2xl mb-3 shadow-lg object-contain bg-white p-1">
-                    <span class="absolute -top-2 -right-2 bg-red-600 text-[8px] font-bold px-2 py-1 rounded-full">#1</span>
-                </div>
-                <h3 class="text-sm font-bold truncate w-full">YouTube</h3>
-                <p class="text-red-500 text-[10px] font-bold mb-4 uppercase">Streaming</p>
-                <a href="/android/youtube" class="w-full bg-blue-600 text-white py-2 rounded-xl text-xs font-bold text-center">Voir</a>
-            </div>
-
-            <div class="app-card bg-gray-800 rounded-3xl p-4 border border-gray-700 flex flex-col items-center text-center">
-                <img src="../logo.png" class="w-16 h-16 rounded-2xl mb-3 shadow-lg">
-                <h3 class="text-sm font-bold truncate w-full">BlocStore</h3>
-                <p class="text-blue-400 text-[10px] font-bold mb-4 uppercase">App officielle</p>
-                <a href="/android/blocstore" class="w-full bg-blue-600 text-white py-2 rounded-xl text-xs font-bold text-center">Voir</a>
-            </div>
-
-            <a href="/popular" class="app-card bg-gray-800/50 rounded-3xl p-4 border-2 border-dashed border-gray-700 flex flex-col items-center justify-center text-center hover:border-blue-500 transition group">
-                <div class="w-10 h-10 bg-gray-700 rounded-full mb-3 flex items-center justify-center group-hover:bg-blue-600 transition"><span class="text-lg">➔</span></div>
-                <span class="text-xs font-bold text-gray-500 group-hover:text-white uppercase">Voir plus</span>
-            </a>
-        </div>
-    </section>
-
-    <section class="container mx-auto py-4">
-        <div class="flex items-center mb-6 px-6"><div class="h-6 w-1 bg-yellow-500 rounded-full mr-3"></div><h2 class="text-lg font-bold uppercase tracking-tight">Mieux notés</h2></div>
-        <div class="flex overflow-x-auto gap-4 px-6 pb-6 hide-scrollbar">
-            
-            <div class="app-card bg-gray-800 rounded-3xl p-4 border border-gray-700 flex flex-col items-center text-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" class="w-16 h-16 rounded-2xl mb-3 shadow-lg object-contain bg-white p-1 border-2 border-yellow-500/50">
-                <h3 class="text-sm font-bold truncate w-full">YouTube</h3>
-                <p class="text-yellow-500 text-[10px] font-bold mb-4 uppercase">Note: 4.9/5</p>
-                <a href="/android/youtube" class="w-full bg-blue-600 text-white py-2 rounded-xl text-xs font-bold text-center">Voir</a>
-            </div>
-
-            <a href="/rated/better" class="app-card bg-gray-800/50 rounded-3xl p-4 border-2 border-dashed border-gray-700 flex flex-col items-center justify-center text-center hover:border-blue-500 transition group">
-                <div class="w-10 h-10 bg-gray-700 rounded-full mb-3 flex items-center justify-center group-hover:bg-blue-600 transition"><span class="text-lg">➔</span></div>
-                <span class="text-xs font-bold text-gray-500 group-hover:text-white uppercase">Voir plus</span>
-            </a>
-        </div>
-    </section>
-
-    <script>
-        // Enregistrement du Service Worker
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js')
-            .then(() => console.log("BlocStore PWA : Prêt !"))
-            .catch((err) => console.log("Erreur PWA :", err));
-        }
-    </script>
 
 <div class="bs-overlay" id="blocstoreNotice">
   <div class="bs-popup">
@@ -176,6 +105,78 @@
     background-color: #1d4ed8;
   }
 </style>
+
+    <nav class="bg-gray-800 p-4 border-b border-blue-600 sticky top-0 z-50 shadow-xl">
+        <div class="container mx-auto flex justify-between items-center px-2">
+            <div class="flex items-center space-x-2">
+                <img src="../logo.png" alt="Logo" class="w-8 h-8 object-contain">
+                <h1 class="text-xl font-black tracking-tighter text-blue-400">BLOC<span class="text-white">STORE</span> <span class="text-[10px] bg-green-600 text-white px-2 py-0.5 rounded ml-2 uppercase">Android</span></h1>
+            </div>
+            <button class="text-white p-2">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </nav>
+
+    <header class="py-8 text-center">
+        <h2 class="text-3xl font-extrabold mb-1 text-white">BlocStore Mobile</h2>
+        <p class="text-gray-500 text-xs uppercase font-bold tracking-widest">Store APK Officiel</p>
+    </header>
+
+    <section class="container mx-auto py-4">
+        <div class="flex items-center mb-6 px-6"><div class="h-6 w-1 bg-blue-500 rounded-full mr-3"></div><h2 class="text-lg font-bold uppercase tracking-tight">Populaire</h2></div>
+        <div class="flex overflow-x-auto gap-4 px-6 pb-6 hide-scrollbar">
+            
+            <div class="app-card bg-gray-800 rounded-3xl p-4 border border-gray-700 flex flex-col items-center text-center">
+                <div class="relative">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" class="w-16 h-16 rounded-2xl mb-3 shadow-lg object-contain bg-white p-1">
+                    <span class="absolute -top-2 -right-2 bg-red-600 text-[8px] font-bold px-2 py-1 rounded-full">#1</span>
+                </div>
+                <h3 class="text-sm font-bold truncate w-full">YouTube</h3>
+                <p class="text-red-500 text-[10px] font-bold mb-4 uppercase">Streaming</p>
+                <a href="/android/youtube" class="w-full bg-blue-600 text-white py-2 rounded-xl text-xs font-bold text-center">Voir</a>
+            </div>
+
+            <div class="app-card bg-gray-800 rounded-3xl p-4 border border-gray-700 flex flex-col items-center text-center">
+                <img src="../logo.png" class="w-16 h-16 rounded-2xl mb-3 shadow-lg">
+                <h3 class="text-sm font-bold truncate w-full">BlocStore</h3>
+                <p class="text-blue-400 text-[10px] font-bold mb-4 uppercase">App officielle</p>
+                <a href="/android/blocstore" class="w-full bg-blue-600 text-white py-2 rounded-xl text-xs font-bold text-center">Voir</a>
+            </div>
+
+            <a href="/popular" class="app-card bg-gray-800/50 rounded-3xl p-4 border-2 border-dashed border-gray-700 flex flex-col items-center justify-center text-center hover:border-blue-500 transition group">
+                <div class="w-10 h-10 bg-gray-700 rounded-full mb-3 flex items-center justify-center group-hover:bg-blue-600 transition"><span class="text-lg">➔</span></div>
+                <span class="text-xs font-bold text-gray-500 group-hover:text-white uppercase">Voir plus</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="container mx-auto py-4">
+        <div class="flex items-center mb-6 px-6"><div class="h-6 w-1 bg-yellow-500 rounded-full mr-3"></div><h2 class="text-lg font-bold uppercase tracking-tight">Mieux notés</h2></div>
+        <div class="flex overflow-x-auto gap-4 px-6 pb-6 hide-scrollbar">
+            
+            <div class="app-card bg-gray-800 rounded-3xl p-4 border border-gray-700 flex flex-col items-center text-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" class="w-16 h-16 rounded-2xl mb-3 shadow-lg object-contain bg-white p-1 border-2 border-yellow-500/50">
+                <h3 class="text-sm font-bold truncate w-full">YouTube</h3>
+                <p class="text-yellow-500 text-[10px] font-bold mb-4 uppercase">Note: 4.9/5</p>
+                <a href="/android/youtube" class="w-full bg-blue-600 text-white py-2 rounded-xl text-xs font-bold text-center">Voir</a>
+            </div>
+
+            <a href="/rated/better" class="app-card bg-gray-800/50 rounded-3xl p-4 border-2 border-dashed border-gray-700 flex flex-col items-center justify-center text-center hover:border-blue-500 transition group">
+                <div class="w-10 h-10 bg-gray-700 rounded-full mb-3 flex items-center justify-center group-hover:bg-blue-600 transition"><span class="text-lg">➔</span></div>
+                <span class="text-xs font-bold text-gray-500 group-hover:text-white uppercase">Voir plus</span>
+            </a>
+        </div>
+    </section>
+
+    <script>
+        // Enregistrement du Service Worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+            .then(() => console.log("BlocStore PWA : Prêt !"))
+            .catch((err) => console.log("Erreur PWA :", err));
+        }
+    </script>
 
 </body>
 </html>
